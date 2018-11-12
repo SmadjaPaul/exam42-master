@@ -1,4 +1,4 @@
-Assignment name  : check_mate 
+Assignment name  : checkmate 
 Expected files   : *.c, *.h
 Allowed functions: write, malloc, free
 --------------------------------------------------------------------------------
@@ -31,7 +31,7 @@ Examples:
 
 $> ./chessmate '..' '.K' | cat -e
 Fail$
-$> ./check_mate 'R...' '.K..' '..P.' '....' | cat -e
+$> ./chessmate 'R...' '..P.' '.K..' '....' | cat -e
 Success$
 $> ./chessmate 'R...' 'iheK' '....' 'jeiR' | cat -e
 Success$
