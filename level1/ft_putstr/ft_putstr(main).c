@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rev_print.c                                        :+:      :+:    :+:   */
+/*   ft_putstr(main).c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pasmadja <pasmadja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/11 22:35:40 by pasmadja          #+#    #+#             */
-/*   Updated: 2018/11/13 16:19:42 by pasmadja         ###   ########.fr       */
+/*   Created: 2018/11/13 08:48:53 by pasmadja          #+#    #+#             */
+/*   Updated: 2018/11/13 08:55:02 by pasmadja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,21 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-int		main(int argc, char **argv)
+void	ft_putstr(char *str)
 {
 	int	i;
 
 	i = 0;
-	if (argc == 2)
+	while (str[i] != '\0')
 	{
-		while (argv[1][i] != '\0')
-			i++;
-		while (i >= 0)
-		{
-			ft_putchar(argv[1][i]);
-			i--;
-		}
+		ft_putchar(str[i]);
+		i++;
 	}
-	ft_putchar('\n');
-	return (0);
+}
+
+int     main(int ac, char **av)
+{
+    if (ac >= 2)
+        ft_putstr(av[1]);
+    return (0);
 }

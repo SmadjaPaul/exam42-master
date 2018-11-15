@@ -1,49 +1,60 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   aff_a.c                                            :+:      :+:    :+:   */
+/*   inter_easy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: pasmadja <pasmadja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/11/11 22:33:16 by pasmadja          #+#    #+#             */
-/*   Updated: 2018/11/13 08:31:42 by pasmadja         ###   ########.fr       */
+/*   Created: 2018/11/14 13:29:45 by pasmadja          #+#    #+#             */
+/*   Updated: 2018/11/14 16:05:45 by pasmadja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+int		ft_verif_char(char *str, char c, int index)
 {
-	write(1, &c, 1);
-}
-
-char	ft_aff_a(char *str)
-{
-	int	i;
+	int		i;
 
 	i = 0;
-	while (str[i] != '\0')
+	while (i < index)
 	{
-		if (str[i] == 'a')
+		if (str[i] == c)
+			return (0);
+		i++;
+	}
+	return (1);
+}
+
+void	ft_inter(char *s1, char *s2)
+{
+	int		i;
+	int		j;
+
+	i = 0;
+	while (s1[i])
+	{
+		if (ft_verif_char(s1, s1[i], i) == 1)
 		{
-			ft_putchar('a');
-			break;
+			j = 0;
+			while (s2[j])
+			{
+				if (s2[j] == s1[i])
+				{
+					write(1, &s1[i], 1);
+					break ;
+				}
+				j++;
+			}
 		}
 		i++;
 	}
-	ft_putchar('\n');
-	return (*str);
 }
 
 int		main(int argc, char **argv)
 {
-	if (argc != 2)
-	{
-		ft_putchar('\n');
-	}
-	else
-	{
-		ft_aff_a(argv[1]);
-	}
+	if (argc == 3)
+		ft_inter(argv[1], argv[2]);
+	write(1, "\n", 1);
 	return (0);
 }

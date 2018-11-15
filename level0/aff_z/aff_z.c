@@ -6,20 +6,14 @@
 /*   By: pasmadja <pasmadja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 22:33:44 by pasmadja          #+#    #+#             */
-/*   Updated: 2018/11/11 22:34:28 by pasmadja         ###   ########.fr       */
+/*   Updated: 2018/11/13 08:31:36 by pasmadja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
 int		main(void)
 {
-	ft_putchar('z');
-	ft_putchar('\n');
+	write(1, "z\n", 2);
 	return (0);
 }

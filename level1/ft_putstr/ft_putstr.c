@@ -6,11 +6,9 @@
 /*   By: pasmadja <pasmadja@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/11 22:35:01 by pasmadja          #+#    #+#             */
-/*   Updated: 2018/11/11 22:36:59 by pasmadja         ###   ########.fr       */
+/*   Updated: 2018/11/13 08:49:06 by pasmadja         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 void	ft_putchar(char c)
 {
