@@ -121,8 +121,3 @@ This work is published under the terms of **[42 Unlicense](https://github.com/gc
 ## Contact & contribute
 To contact me and helping me to (fix bugs || improve) 42-Exam, feel free to e-mail me at **pasmadja at student dot 42 dot fr**
 
-### **Donations**
-
-Donations are accepted at:
-
-+ **BTC**: 
